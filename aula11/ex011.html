@@ -6,23 +6,18 @@
     <title>Paises</title>
 </head>
 <body>
-    <h1>Sistema Mundial</h1>
-        <input type="text" name="xbr" id="xbr">
-        <input type="button" value="Verificar" onclick="calcular()">
-        <div id="res">
-    
-        </div>
+    <h1>Teste de Nacionalidade</h1>
+    <p id="mensagem"></p>
+
         <script>
-            function calcular() {
-                var txbr = window.document.querySelector('input#xbr')
-                var res = window.document.querySelector('div#res')
-                var vel = Number(xbr.value)
-                res.innerHTML = `<p>vivendo em <strong>${vel}</strong></p>`
-                if (vel == 'pais') {
-                    res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong>`
-                }
-                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            var pais = 'Brasil';
+            let mensagem = `Vivendo em ${pais}<br>`;
+            if (pais == 'Brasil') {
+                mensagem += ('Você é Brasileiro!')
+            } else {
+                mensagem += ('Você é Estrangeiro!')
             }
+            document.getAnimations('mensagem').innerHTML = mensagem;
         </script>
 </body>
 </html>
