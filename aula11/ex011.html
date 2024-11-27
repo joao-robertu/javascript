@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paises</title>
+    <title>Testes</title>
 </head>
 <body>
     <h1>Teste de Nacionalidade</h1>
+    <label for="pais">Digita o pais de onde você mora:</label>
+    <input type="text" id="pais" placeholder="Ex: Brasil">
+    <button onclick="verificar()">Verificar</button>
     <p id="mensagem"></p>
+    <div id="res">
 
-        <script>
-            var pais = 'Brasil';
-            let mensagem = `Vivendo em ${pais}<br>`;
-            if (pais == 'Brasil') {
-                mensagem += ('Você é Brasileiro!')
+    </div>
+
+    <script>
+        function verificar() {
+            var pais = window.document.querySelector('input#pais')
+            var mensagem = `Vivendo em ${pais}<br>`
+            var res = window.document.querySelector('div#res')
+            var vel = Number(pais.value)
+            if (pais.toLowercase()== 'brasil') {
+                mensagem.innerHTML += 'Você é <strong>Brasileiro</strong>'
             } else {
-                mensagem += ('Você é Estrangeiro!')
+                mensagem.innerHTML += 'Você é <strong>Estrangeiro!</strong>'
             }
-            document.getAnimations('mensagem').innerHTML = mensagem;
-        </script>
+        }
+    </script>
+
+        
 </body>
 </html>
