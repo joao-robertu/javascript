@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Sistema Mundial</h1>
+        <input type="text" name="xbr" id="xbr">
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="res">
+    
+        </div>
+        <script>
+            function calcular() {
+                var txbr = window.document.querySelector('input#xbr')
+                var res = window.document.querySelector('div#res')
+                var vel = Number(xbr.value)
+                res.innerHTML = `<p>vivendo em <strong>${vel}</strong></p>`
+                if (vel == 'pais') {
+                    res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong>`
+                }
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            }
+        </script>
+</body>
+</html>
